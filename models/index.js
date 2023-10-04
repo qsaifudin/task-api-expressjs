@@ -29,6 +29,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 db.QueryTypes = QueryTypes;
 
+// Import and attach the Task model to the db object
 db.task = require("../models/Task")(sequelize, Sequelize);
 
 module.exports = db;

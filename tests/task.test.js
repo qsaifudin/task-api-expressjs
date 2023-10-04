@@ -80,3 +80,16 @@ describe("Tasks API", () => {
     expect(response.body).toHaveProperty("message", "Item deleted");
   });
 });
+
+describe("Error Handling", () => {
+  // Test 404 Not Found Error
+  it("should return 404 Not Found for an unmatched route", async () => {
+    const response = await request(app).get("/nonexistentroute");
+
+    expect(response.status).toBe(404);
+    expect(response.body).toEqual({
+      status: false,
+      message: "Route not found",
+    });
+  });
+});

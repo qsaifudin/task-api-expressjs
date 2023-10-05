@@ -1,7 +1,7 @@
 const request = require("supertest"); // Using supertest instead of chai-http for Jest
 
 // Import your Express app
-const app = require("../app.js");
+const app = require("../src/app.js");
 
 // Example test suite for a tasks API
 describe("Tasks API", () => {
@@ -16,7 +16,7 @@ describe("Tasks API", () => {
     };
 
     const response = await request(app).post("/API/v1/tasks").send(newTask);
-    // console.log("🚀 ~ file: task.test.js:19 ~ it ~ response:", response);
+    console.log("🚀 ~ file: task.test.js:19 ~ it ~ response:", response);
 
     expect(response.status).toBe(200);
     expect(response.body).toHaveProperty("status", true);
@@ -44,7 +44,6 @@ describe("Tasks API", () => {
   it("should get a specific task by ID", async () => {
     const response = await request(app).get(`/API/v1/tasks/${taskId}`);
 
-    console.log("🚀 ~ file: task.test.js:46 ~ it ~ taskId:", taskId);
     expect(response.status).toBe(200);
     expect(response.body).toHaveProperty("status", true);
     expect(response.body).toHaveProperty("data");

@@ -65,7 +65,7 @@ npm start
 - Query Parameters:
   - page: Page number (default: 1)
   - pageSize: Number of items per page (default: 10)
-  - sortBy: Sorting field (default: 'createdAt')
+  - sortBy: Sorting field (default: 'id')
   - sortOrder: Sorting order ('asc' or 'desc', default: 'asc')
   - title: Filter by task title (optional)
 

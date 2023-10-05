@@ -16,11 +16,6 @@ const db = require("./models");
 // Synchronize the database with the defined models (create tables if they don't exist)
 db.sequelize.sync();
 
-// Force sync the database (use with caution, as it will drop and recreate tables)
-// db.sequelize.sync({
-//   force: true,
-// });
-
 // Routes
 require("./routes/taskRoutes")(app);
 

@@ -1,7 +1,7 @@
 const request = require("supertest"); // Using supertest instead of chai-http for Jest
 
 // Import your Express app
-const app = require("../src/app.js");
+const app = require("../app.js");
 
 // Example test suite for a tasks API
 describe("Tasks API", () => {

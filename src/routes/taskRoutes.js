@@ -3,7 +3,12 @@ const controller = require("../controllers/taskController");
 module.exports = (app) => {
   const router = require("express").Router();
 
+  router.get("/", (req, res) => {
+    res.send("Saifudin Task API ExpressJS");
+  });
+
   // Group routes under /api/v1 prefix
+  // Get a list of tasks
   app.use("/API/v1", router);
 
   router.get("/tasks", controller.getAll); // Get a list of tasks

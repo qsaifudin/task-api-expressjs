@@ -28,3 +28,11 @@ body: {title:"string", "description": "string", "completed": boolean }
 DELETE
 /API/v1/tasks/:id: Delete a task by ID.
 example : https://task-expressjs-api-0c787f37eebb.herokuapp.com/API/v1/tasks/1
+
+STRUCTUR FOLDER
+|-- src
+| |-- controllers
+| |-- models
+| |-- routes
+| |-- app.js
+|-- test

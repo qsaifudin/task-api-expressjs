@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/app.js",
-    "test": "jest",
-    "start": "npx netlify-lambda serve src",
-    "build": "npx netlify-lambda build src"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
